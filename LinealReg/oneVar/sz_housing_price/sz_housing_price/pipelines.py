@@ -15,7 +15,7 @@ class SzHousingPricePipeline(object):
         dist = district.getDistrict()
         for key in dist:
             if item['disKey']==key.split("/")[-2]:
-                fp = open('/Users/chencz/AI/ML Show/ML-SHOW-Spider/LinealReg/oneVar/sz_housing_price/data/sz_' + dist[key] + '.txt', 'a+')
+                fp = open('需要保存文件的绝对路径' + dist[key] + '.txt', 'a+')
                 arr_len=len(item['area'])
                 for i in range(0,arr_len):
                     areaNum=re.findall(r"^\d+",item['area'][i])[0]
